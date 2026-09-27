@@ -1,0 +1,20 @@
+{
+  "name": "poker-dataset-generator",
+  "version": "1.0.0",
+  "description": "Gera um dataset de cenários pós-flop resolvidos por poker-solver-engine, para treinar um modelo que generalize a estratégia do solver.",
+  "type": "module",
+  "main": "src/datasetGenerator.js",
+  "bin": {
+    "generate-dataset": "./bin/generate.js"
+  },
+  "scripts": {
+    "generate": "node bin/generate.js",
+    "generate:sample": "node bin/generate.js --count 50 --out data/sample.jsonl"
+  },
+  "dependencies": {
+    "poker-solver-engine": "file:../../poker/poker-solver-engine"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
